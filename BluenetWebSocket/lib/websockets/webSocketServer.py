@@ -1,10 +1,10 @@
 from autobahn.twisted.websocket import WebSocketServerFactory
 from twisted.internet import reactor
 
-from lib.websockets.webSocketProtocol import BluenetDashboardProtocol
+from BluenetWebSocket.lib.websockets.webSocketProtocol import WebSocketProtocol
 
 
-class WebSocketServer:
+class WebSocketServerCore:
     port = 9000
 
     def __init__(self, port = 9000):
@@ -12,10 +12,11 @@ class WebSocketServer:
 
     def start(self):
         factory = WebSocketServerFactory()
-        factory.protocol = BluenetDashboardProtocol
+        factory.protocol = WebSocketProtocol
 
         reactor.listenTCP(self.port, factory)
         reactor.run()
 
     def stop(self):
+        print("\nClose Command Received: Stopping Server...")
         reactor.stop()
