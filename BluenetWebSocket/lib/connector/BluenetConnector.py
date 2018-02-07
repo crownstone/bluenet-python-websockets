@@ -1,5 +1,5 @@
 from BluenetWebSocket._EventBusInstance import WSEventBus
-from BluenetWebSocket.lib.topics import Topics
+from BluenetWebSocket.lib.topics.Topics import Topics
 
 
 class BluenetConnector:

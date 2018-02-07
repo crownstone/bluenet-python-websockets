@@ -3,7 +3,7 @@ import json
 from autobahn.twisted.websocket import WebSocketServerProtocol
 
 from BluenetWebSocket._EventBusInstance import WSEventBus
-from BluenetWebSocket.lib.topics import Topics
+from BluenetWebSocket.lib.topics.Topics import Topics
 
 
 class WebSocketProtocol(WebSocketServerProtocol):
@@ -43,7 +43,7 @@ class WebSocketProtocol(WebSocketServerProtocol):
 
 
     def writeMessage(self, data):
-        print("sent", self.counter, data)
+        print("sent", self.counter, data["topic"])
         self.counter = self.counter + 1
         self.sendMessage(bytes(str(json.dumps(data)),'utf-8'), False)
 
