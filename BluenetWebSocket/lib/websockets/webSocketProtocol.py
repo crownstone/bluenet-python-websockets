@@ -43,7 +43,6 @@ class WebSocketProtocol(WebSocketServerProtocol):
 
 
     def writeMessage(self, data):
-        print("sent", self.counter, data["topic"])
         self.counter = self.counter + 1
         self.sendMessage(bytes(str(json.dumps(data)),'utf-8'), False)
 
