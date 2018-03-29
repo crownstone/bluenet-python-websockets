@@ -5,10 +5,10 @@ from BluenetLib import Bluenet
 # Create new instance of Bluenet
 from BluenetWebSocket import WebSocketServer
 
-bluenet = Bluenet()
+bluenet = Bluenet(catchSIGINT=False)
 
 # Start up the USB bridge
-bluenet.initializeUsbBridge("/dev/tty.usbmodemFD131", catchSIGINT=False)
+bluenet.initializeUSB("/dev/tty.usbmodemFD131")
 
 # start the websocket server
 server = WebSocketServer(9000)

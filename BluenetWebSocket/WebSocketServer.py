@@ -15,11 +15,11 @@ class WebSocketServer(WebSocketServerCore):
         self.loadDefaultParser()
         
         
-    def connectToBluenet(self, bluenetInstance):
+    def connectToBluenet(self, bluenetInstance, eventBus, topics):
         ConsumerParser.loadBluenet(bluenetInstance)
         
         connector = BluenetConnector()
-        connector.connect(bluenetInstance.getEventBus(), bluenetInstance.getTopics())
+        connector.connect(eventBus, topics)
     
     def loadDefaultParser(self):
         WSEventBus.unsubscribe(self.parserSubscription)
