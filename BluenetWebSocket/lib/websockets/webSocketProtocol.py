@@ -12,7 +12,7 @@ class WebSocketProtocol(WebSocketServerProtocol):
     
     
     def __init__(self):
-        super().__init__()
+        super(WebSocketProtocol, self).__init__()
         self.writeSubscriptionId = WSEventBus.subscribe(Topics.wsWriteMessage, self.writeMessage)
 
 
