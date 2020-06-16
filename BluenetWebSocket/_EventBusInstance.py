@@ -1,3 +1,3 @@
-from BluenetLib import EventBus
+from crownstone_uart import UartEventBus
 
-WSEventBus = EventBus()
+WSEventBus = UartEventBus
