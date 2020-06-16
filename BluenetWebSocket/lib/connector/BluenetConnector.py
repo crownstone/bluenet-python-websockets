@@ -7,9 +7,10 @@ class BluenetConnector:
         pass
         
     def connect(self, bluenetEventBus, bluenetTopics):
-        for topic in bluenetTopics:
-            bluenetEventBus.subscribe(topic, self.generateLambda(topic))
-        
+        for topic in vars(bluenetTopics).keys():
+            if not topic.startswith("__"):
+                bluenetEventBus.subscribe(topic, self.generateLambda(topic))
+
     
     def generateLambda(self, topic):
         """
