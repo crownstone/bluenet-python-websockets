@@ -24,7 +24,7 @@ class BluenetConnector:
     
     def sendOverWebsocket(self, bluenetTopic, payload):
         data = {
-            "topic": bluenetTopic.value,
+            "topic": bluenetTopic,
             "data": payload
         }
         WSEventBus.emit(Topics.wsWriteMessage, data)
