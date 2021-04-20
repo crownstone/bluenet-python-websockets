@@ -10,7 +10,7 @@ setup(
     version='0.0.1',
     packages=find_packages(exclude=["examples", "DevParser", "tests", "techDocs"]),
     install_requires=[
-        'autobahn==17.9.3',
+        'autobahn==20.12.3',
         'Twisted==17.9.0',
     ],
  )
