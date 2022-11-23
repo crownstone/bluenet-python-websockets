@@ -2,9 +2,11 @@
 
 Websocket extension of the Bluenet-python-lib 
 
+# License
+
 ## Open-source license
 
-This firmware is provided under a noncontagious open-source license towards the open-source community. It's available under three open-source licenses:
+This software is provided under a noncontagious open-source license towards the open-source community. It's available under three open-source licenses:
  
 * License: LGPL v3+, Apache, MIT
 
@@ -22,7 +24,7 @@ This firmware is provided under a noncontagious open-source license towards the 
 
 ## Commercial license
 
-This firmware can also be provided under a commercial license. If you are not an open-source developer or are not planning to release adaptations to the code under one or multiple of the mentioned licenses, contact us to obtain a commercial license.
+This software can also be provided under a commercial license. If you are not an open-source developer or are not planning to release adaptations to the code under one or multiple of the mentioned licenses, contact us to obtain a commercial license.
 
 * License: Crownstone commercial license
 
